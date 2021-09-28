@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http'
 export class MovieService {
 
   url='/api';
+  //url2='http://localhost:3000/api';
   constructor(private http : HttpClient) { }
 
   ///get movie
@@ -24,7 +25,10 @@ getOneMovie(id:string){
  
 ///////add movie
 addMovie(movie:Movie){
+  console.log("este es en la ruta")
+  console.log(movie)
   return this.http.post(this.url,movie)
+  
 }
 
 deleteMovie(id:string){
@@ -39,12 +43,12 @@ editMovie(id:string, movie:Movie){
 }
 
 export interface Movie{
-  id?:string;
-  tittle?:string;
-  year?:number;
-  time?:number;
-  lang?:string;
-  dt?:Date;
-  country?:string;
+  mov_id:string;
+  mov_title?:string;
+  mov_year?:number;
+  mov_time?:number;
+  mov_lang?:string;
+  mov_dt_rel?: string ;
+  mov_rel_country?:string;
 
 }
