@@ -1,0 +1,26 @@
+/* .container {
+
+  width: 100%;
+} */
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+}
+.form-label {
+  color: aliceblue;
+}
+p {
+  color: rgb(240, 240, 248);
+}
+
+.icon {
+  color: rgb(3, 3, 3);
+}
+.button-icon {
+  display: flex;
+  justify-content: center;
+}

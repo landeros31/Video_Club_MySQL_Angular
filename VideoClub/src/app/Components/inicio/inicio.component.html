@@ -1,10 +1,10 @@
-
-
 <div class="container">
   <p>Lista de Peliculas</p>
 
-<button routerLink='/add' type="button" class="btn btn-dark">Agregar</button>
-  <table class="table">
+  <button routerLink="/add" type="button" class="btn btn-dark">
+    <i class="fas fa-plus"></i>
+  </button>
+  <table class="table table-striped table-dark">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -20,24 +20,34 @@
     </thead>
     <tbody>
       <tr *ngFor="let movie of ListMovie">
-        <th>{{movie.mov_id}} </th>
-        <td>{{movie.mov_title}}</td>
-        <td>{{movie.mov_year}}</td>
-        <td>{{movie.mov_time}}</td>
-        <td>{{movie.mov_lang}} </td>
-        <td>{{movie.mov_dt_rel}} </td>
-        <td>{{movie.mov_rel_country}}</td>
+        <th>{{ movie.mov_id }}</th>
+        <td>{{ movie.mov_title }}</td>
+        <td>{{ movie.mov_year }}</td>
+        <td>{{ movie.mov_time }}</td>
+        <td>{{ movie.mov_lang }}</td>
+        <td>{{ movie.mov_dt_rel }}</td>
+        <td>{{ movie.mov_rel_country }}</td>
         <td>
-        
-          <button (click)="edit(movie.mov_id)" type="button" class="btn btn-primary">Editar</button>
+          <button
+            (click)="edit(movie.mov_id)"
+            type="button"
+            class="btn btn-outline-secondary"
+          >
+            <i class="fas fa-edit"></i>
+            <!--     Editar -->
+          </button>
         </td>
         <td>
-          <button (click)="deletem(movie.mov_id)" type="button" class="btn btn-danger">Eliminar</button>
+          <button
+            (click)="deletem(movie.mov_id)"
+            type="button"
+            class="btn btn-secondary"
+          >
+            <i class="fas fa-trash-alt"></i>
+            <!-- Eliminar -->
+          </button>
         </td>
-  
       </tr>
-    
     </tbody>
   </table>
-  
 </div>
