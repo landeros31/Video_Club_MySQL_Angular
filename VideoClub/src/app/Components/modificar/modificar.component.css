@@ -9,8 +9,10 @@
 .form-label {
   color: aliceblue;
 }
-p {
+.container p {
   color: rgb(240, 240, 248);
+  font-size: 22px;
+  text-align: center;
 }
 
 .icon {
