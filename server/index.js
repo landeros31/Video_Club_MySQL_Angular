@@ -13,7 +13,7 @@ app.use(express.json())
 app.set('port',port)
 
 //rutas
-app.use('/api', require('../server/rutas'))
+app.use('/', require('../server/rutas'))
 
 /////iniciar express
 app.listen(app.get('port'),(error)=>{
